@@ -8,3 +8,8 @@ jobs:
     steps:
       - name: Print greeting
         run: echo "Hello Pavan! GitHub Actions is working 🎉"
+  plan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: echo "Planning"
