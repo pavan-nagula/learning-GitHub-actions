@@ -1,15 +1,15 @@
-name: Hello World
+name: Hello World #workflow name
 
-on: [push]
+on: [push] #when to trigger this workflow
 
-jobs:
-  test:
+jobs: #Workflows are divided into jobs. Each job is like a task
+  test: #This is the job name
+    runs-on: ubuntu-latest #This tells GitHub to start a fresh Linux computer.
+    steps: #Each step runs one command or uses an action.
+      - name: Testing
+        run: echo "Testing"
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Print greeting
-        run: echo "Hello Pavan! GitHub Actions is working 🎉"
-  plan:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print greeting
-        run: echo "Planning"
+      - name: Deploying
+        run: echo "Deploying"
